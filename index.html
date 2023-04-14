@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-        <div>Recipe</div>
+        <div id="recipe">Recipe</div>
         <nav>
           <ul>
             <li><a href="#attendance_list">Attendance List</a></li>
@@ -47,15 +47,19 @@
           <li><strong>Core Concepts</strong></li>
             <p>
               This space is for contents of <em>Core Concepts</em>.
+              <details>
+                <summary>Concept 1</summary>
+                <p>This part is for details of Concept 1.</p>
+              </details>
+              <details>
+                <summary>Concept 2</summary>
+                <p>This part is for details of Concept 2.</p>
+              </details>
             </p>
           <li><b>Conclusion</b></li>
             <p>
               This space is for contents of <i>Conclusion</i>.
             </p>
-        </section>
-
-        <section>
-          <h2 id="comments">Comments</h2>
         </section>
 
         <section>
@@ -79,6 +83,47 @@
           </audio>
         </section>
       <p>For more information please see: <span><a href="https://github.com/AdaQi-001/Lab2_Starter">GitHub Repository</a></span></p>
+
+      <section>
+        <h2 id="comments">Comments</h2>
+        <form>
+          <fieldset>
+           <legend>Comments:</legend>
+           <label for="UserName">Name:</label>
+           <input type="text" id="UserName" name="UserName"><br>
+           <label for="Date">Date:</label>
+           <input type="date" id="Date" name="Date"><br>
+
+           <input type="radio" id="Presence" name="pOrA" value="Present">
+           <label for="Presence">Present</label><br>
+           <input type="radio" id="Absence" name="pOrA" value="Absent">
+           <label for="Absense">Absent</label><br>
+
+           <label for="vote">Vote who you think participates the most:</label>
+           <!-- <input list="candidates" name="vote" id="vote"> -->
+           <select name="vote" id="candidates">
+             <option value="Abby">Abby</option>
+             <option value="Bryan">Bryan</option>
+             <option value="Cathy">Cathy</option>
+             <option value="David">David</option>
+             </select><br><br>
+
+           <label for="topic">Choose the topic of your comments:</label>
+           <input list="topics" name="choice" id="choice">
+           <datalist name="choice" id="topics">
+            <option value="Contents">contents of meeting</option>
+            <option value="Time and duration">starting time</option>
+            <option value="Time and duration">duration of meeting</option>
+            <option value="Additional remarks">additional remarks</option>
+           </datalist><br>
+           <label for="comment">Your comment:</label><br>
+           <textarea id="comment" name="comment">Please leave your comments here</textarea><br>
+           <input type="submit" value="Submit">
+          </fieldset>
+         </form>
+      </section>
+
+      <button type="button"><a href="#recipe">Back to the top</a></button>
     </main>
 
   </body>
