@@ -38,29 +38,30 @@
           </ol>
         </section>
 
-        <section>
-          <h2 id="agenda">Agenda</h2>
-          <li>Brainstorm</li>
-            <p>
-              This space is for contents of Brainstorm.
-            </p>
-          <li><strong>Core Concepts</strong></li>
-            <p>
-              This space is for contents of <em>Core Concepts</em>.
-              <details>
-                <summary>Concept 1</summary>
-                <p>This part is for details of Concept 1.</p>
-              </details>
-              <details>
-                <summary>Concept 2</summary>
-                <p>This part is for details of Concept 2.</p>
-              </details>
-            </p>
-          <li><b>Conclusion</b></li>
-            <p>
-              This space is for contents of <i>Conclusion</i>.
-            </p>
-        </section>
+        <!-- <section> -->
+        <h2 id="agenda">Agenda</h2>
+        <li>Brainstorm</li>
+          <p>
+            This space is for contents of Brainstorm.
+          </p>
+        <li><strong>Core Concepts</strong></li>
+          <!-- <p> -->
+            This space is for contents of <em>Core Concepts</em>.
+            <details>
+              <summary>Concept 1</summary>
+              <p>This part is for details of Concept 1.</p>
+            </details>
+            <details>
+              <summary>Concept 2</summary>
+              <p>This part is for details of Concept 2.</p>
+            </details>
+            <br>
+          <!-- </p> -->
+        <li><b>Conclusion</b></li>
+          <p>
+            This space is for contents of <i>Conclusion</i>.
+          </p>
+        <!-- </section> -->
 
         <section>
           <h2 id="pictures">Pictures</h2>
@@ -75,7 +76,7 @@
           <h2 id="recordings">Recordings</h2>
           <p>This is the video recording: </p>
           <video width="320" height="240" controls>
-            <source src="video1654396473.mp4" tyoe="video/mp4">
+            <source src="video1654396473.mp4" type="video/mp4">
           </video>
           <p>This is the audio recording: </p>
           <audio controls>
@@ -97,9 +98,9 @@
            <input type="radio" id="Presence" name="pOrA" value="Present">
            <label for="Presence">Present</label><br>
            <input type="radio" id="Absence" name="pOrA" value="Absent">
-           <label for="Absense">Absent</label><br>
+           <label for="Absence">Absent</label><br>
 
-           <label for="vote">Vote who you think participates the most:</label>
+           <label for="candidates">Vote who you think participates the most:</label>
            <!-- <input list="candidates" name="vote" id="vote"> -->
            <select name="vote" id="candidates">
              <option value="Abby">Abby</option>
@@ -108,9 +109,9 @@
              <option value="David">David</option>
              </select><br><br>
 
-           <label for="topic">Choose the topic of your comments:</label>
+           <label for="choice">Choose the topic of your comments:</label>
            <input list="topics" name="choice" id="choice">
-           <datalist name="choice" id="topics">
+           <datalist id="topics">
             <option value="Contents">contents of meeting</option>
             <option value="Time and duration">starting time</option>
             <option value="Time and duration">duration of meeting</option>
@@ -123,7 +124,7 @@
          </form>
       </section>
 
-      <button type="button"><a href="#recipe">Back to the top</a></button>
+      <a href="#recipe"><button type="button">Back to the top</button></a>
     </main>
 
   </body>
