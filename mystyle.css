@@ -1,0 +1,137 @@
+/* Some of the CSS properties are used in index.html as inline CSS or Internal CSS with <style>*/
+
+header {
+    position: sticky;
+}
+
+/* Flexbox */
+.listOfRef {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: none;
+    background: antiquewhite;
+    list-style: none;
+}
+.listOfRef a {
+    display: block;
+    padding: 1em;
+    color: rgb(76, 80, 144);
+    flex-basis: 10pt;
+}
+  
+.listOfRef a:hover {
+background: #c3cedc;
+}
+
+@media all and (max-width: 650px) { /* Media, based on screen width */
+    .listOfRef {
+        flex-direction: column;
+        flex-flow: column wrap;
+        padding: 0px;
+    }
+    .listOfRef a { 
+        text-align: center; 
+        padding: 5px;
+    }
+    .listOfRef li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
+ul {
+    padding-left: 0;
+}
+
+body {
+    background-color: #dddddd;
+    margin: 50px 50px 50px 50px;
+}
+
+section {
+    border-style: inset;
+    border-color: rgb(85, 160, 239) rgb(255, 255, 255) rgb(255, 255, 255) rgb(208, 223, 248);
+    border-width: 1ex;
+    border-radius: 1em;
+    padding: 1.5ex;
+    margin-top: 1.5ex;
+    margin-bottom: 1.5ex;
+}
+  
+h1 {
+    color: rgb(1, 80, 80); /* The headlin is in dark cyan */
+}
+
+h2 {
+    color: hsla(210, 38%, 52%, 0.75)  /* Headers of the sections are in blue */
+}
+
+p {
+    font-size: 2ex;
+    line-height: 2ex;
+    padding: 1pt 1pt;
+    margin: auto;
+    color:#000000;
+    text-decoration: solid;
+    text-align: left;
+}
+
+/* Grid */
+.recording {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-content: space-evenly;
+    gap: 5px;
+    padding: 5px;
+    background-color: antiquewhite;
+    border: 1px solid #000000;
+}
+.recording > div {
+    background-color: antiquewhite;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid gray;
+    border-radius: 2pt;
+    padding: 2px;
+    grid-row-start: row-start1;
+    grid-row-end: 2;
+}
+
+
+.moreInfo {
+    text-decoration: red wavy overline;
+    text-align: center;
+}
+
+.comment {
+    display: inline;
+    height: auto;
+    width: auto;
+    max-width: 10pc;
+    min-width: 5pc;
+}
+
+div {
+    font-size: larger;
+    padding-top: 1pc;
+    padding-right: 0.5cm;
+    padding-bottom: 1pt;
+    padding-left: 0.5cm;
+}
+
+button {
+    color: orange;
+    margin-top: 1lh;
+    margin-bottom: 1vw;
+    margin-left: 65vb;
+    margin-right: 42dvw;
+    position: relative;
+}
+button:hover {
+    color: orangered;
+}
+button:active {
+    display: none;
+}
