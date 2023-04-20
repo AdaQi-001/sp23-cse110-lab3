@@ -3,19 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
     <title>CSE 110 Lab 2</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
-    <header>
-        <div id="recipe">Recipe</div>
+    <header> 
+        <style> /* Internal CSS with <style>(line 13-18) and Inline CSS(line 19) */
+          header{
+            background-color: rgba(172, 209, 234, 0.4);
+            margin: auto;
+            border: 0.1cm solid rgb(121, 166, 195)
+          }
+        </style> 
+        <div id="recipe" style="color:hsl(216, 40%, 35%);">Recipe</div>
         <nav>
-          <ul>
+          <ul class="listOfRef">
             <li><a href="#attendance_list">Attendance List</a></li>
             <li><a href="#agenda">Agenda</a></li>
-            <li><a href="#comments">Comments</a></li>
             <li><a href="#pictures">Pictures</a></li>
             <li><a href="#recordings">Recordings</a></li>
+            <li><a href="#comments">Comments</a></li>
           </ul>
         </nav>
     </header>
@@ -23,8 +31,6 @@
     <main>
         <h1>CSE110 Meeting Minutes</h1>
         <h3>Date: April 12th, 2023</h3>
-        <br>
-
         <section>
           <h2 id="attendance_list">Attendance List</h2>
           <p>
@@ -42,11 +48,11 @@
         <h2 id="agenda">Agenda</h2>
         <h4>Brainstorm</h4>
           <p>
-            This space is for contents of Brainstorm.
+            This space is for contents of <em>Brainstorm</em>.
           </p>
         <h4><strong>Core Concepts</strong></h4>
           <!-- <p> -->
-            This space is for contents of <em>Core Concepts</em>.
+            <p>This space is for contents of <em>Core Concepts</em>.</p>
             <details>
               <summary>Concept 1</summary>
               <p>This part is for details of Concept 1.</p>
@@ -72,21 +78,23 @@
           />
         </section>
 
-        <section>
+        <section >
           <h2 id="recordings">Recordings</h2>
-          <p>This is the video recording: </p>
-          <video width="320" height="240" controls>
-            <source src="video1654396473.mp4" type="video/mp4">
-          </video>
-          <p>This is the audio recording: </p>
-          <audio controls>
-            <source src="audio1654396473.mp3" type="audio/mpeg">
-          </audio>
+          <div class="recording">
+            <p>This is the video recording: </p>
+            <div><video width="400" controls>
+              <source src="video1654396473.mp4" type="video/mp4">
+            </video></div>
+            <p>This is the audio recording: </p>
+            <div><audio controls>
+              <source src="audio1654396473.mp3" type="audio/mpeg">
+            </audio></div>
+          </div>
         </section>
-      <p>For more information please see: <span><a href="https://github.com/AdaQi-001/Lab2_Starter">GitHub Repository</a></span></p>
+      <p class="moreInfo">For more information please see: <span><a href="https://github.com/AdaQi-001/Lab2_Starter">GitHub Repository</a></span></p>
 
       <section>
-        <h2 id="comments">Comments</h2>
+        <h2 id="comments" class="comment">Comments</h2>
         <form>
           <fieldset>
            <legend>Comments:</legend>
