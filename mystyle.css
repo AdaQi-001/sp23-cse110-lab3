@@ -2,6 +2,7 @@
 
 header {
     position: sticky;
+    font-family: 'Russo One', sans-serif;
 }
 
 /* Flexbox */
@@ -11,21 +12,21 @@ header {
     flex-flow: row wrap;
     justify-content: flex-start;
     margin: none;
-    background: antiquewhite;
+    background: antiquewhite; 
     list-style: none;
 }
 .listOfRef a {
     display: block;
-    padding: 1em;
-    color: rgb(76, 80, 144);
+    padding: 1em 1em 1em 1em;
+    color: rgb(76, 80, 144); 
     flex-basis: 10pt;
 }
   
 .listOfRef a:hover {
-background: #c3cedc;
+background: #c3cedc; 
 }
 
-@media all and (max-width: 650px) { /* Media, based on screen width */
+@media all and (max-width: 700px) { /* Responsiveness, Media Query, based on screen width */
     .listOfRef {
         flex-direction: column;
         flex-flow: column wrap;
@@ -33,20 +34,27 @@ background: #c3cedc;
     }
     .listOfRef a { 
         text-align: center; 
-        padding: 5px;
+        padding: 5px 5px 5px 5px;
     }
     .listOfRef li:last-of-type a {
         border-bottom: none;
     }
 }
 
-ul {
+/* Combining Two Selectors */
+ul.listOfRef {
     padding-left: 0;
+}
+
+/* Universal Selector */
+ol * {
+    font-family: 'PT Serif', serif;
 }
 
 body {
     background-color: #dddddd;
     margin: 50px 50px 50px 50px;
+    
 }
 
 section {
@@ -59,15 +67,29 @@ section {
     margin-bottom: 1.5ex;
 }
   
+/* Element Selector */
 h1 {
-    color: rgb(1, 80, 80); /* The headlin is in dark cyan */
+    color: rgb(1, 80, 80); 
 }
-
 h2 {
-    color: hsla(210, 38%, 52%, 0.75)  /* Headers of the sections are in blue */
+    color: hsla(210, 38%, 52%, 0.75) 
+}
+/* Selector List*/
+h1, h2 {
+    font-family: 'Russo One', sans-serif;
+}
+/* General sibling combinator */
+h2 ~ img {
+    justify-content: left;
+}
+/* adjacent sibling combinator */
+h1 + h3 {
+    justify-content: left;
 }
 
-p {
+/* Descendant Combinator*/
+section p {
+    font-family: 'PT Serif', serif;
     font-size: 2ex;
     line-height: 2ex;
     padding: 1pt 1pt;
@@ -77,22 +99,29 @@ p {
     text-align: left;
 }
 
+/* Attribute Selector */
+a[href^="https://"] {
+    font-weight: bolder;
+}
+
 /* Grid */
+/* Class Selector */
 .recording {
     display: grid;
     grid-template-columns: repeat(2,auto);
     justify-content: space-evenly;
     gap: 5px;
     padding: 5px;
-    background-color: antiquewhite;
-    border: 1px solid #000000;
+    background-color: antiquewhite; 
+    border: 1px solid #000000; 
 }
+/* Child Combinator */
 .recording > div {
-    background-color: antiquewhite;
+    background-color: antiquewhite; 
     margin: auto;
     text-align: center;
     justify-content: center;
-    border: 2px solid gray;
+    border: 2px solid gray; 
     border-radius: 2pt;
     padding: 2px;
     grid-row-start: row-start1;
@@ -105,7 +134,12 @@ p {
     text-align: center;
 }
 
-.comment {
+form {
+    font-family: 'PT Serif', serif;
+}
+
+/* ID Selector */
+#comments {
     display: inline;
     height: auto;
     width: auto;
@@ -121,16 +155,17 @@ div {
     padding-left: 0.5cm;
 }
 
-button {
-    color: orange;
+button { /* 3 unique absolute units used */
+    color: orange; 
     margin-top: 1lh;
     margin-bottom: 1vw;
     margin-left: 65vb;
     margin-right: 42dvw;
     position: relative;
 }
+/* Pseudo-class Selector */
 button:hover {
-    color: orangered;
+    color: orangered; 
 }
 button:active {
     display: none;
